@@ -14,7 +14,6 @@ body {
 
 header {
     background-image: url(./img/header.jpg);
-    background-repeat: no-repeat;
     background-size: cover;
     height: 250px;
     color: var(--fc-header);
@@ -41,10 +40,126 @@ a {
 .main-nav {
     display: flex;
     justify-content: center;
-    gap: 0 2em;
+    gap: 0 1.4em;
 }
 
+/* About section */
+
 .about-us {
+    padding-top: 1em;
     display: grid;
+    grid-template-areas:
+        'top'
+        'one'
+        'two'
+        'three';
     gap: 2em;
 }
+
+.about-us-item {
+    padding: 1em;
+}
+
+.about-heading {
+    grid-area: top;
+}
+
+.about1 {
+    grid-area: one;
+}
+
+.about2 {
+    grid-area: two;
+}
+
+.about3 {
+    grid-area: three;
+}
+
+@media (min-width: 1000px) {
+    .about-us {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+            'top . .'
+            'one two three';
+    }
+
+    .houses {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .houses h2 {
+        grid-column: 1 /4;
+    }
+}
+
+/* houses section */
+.houses {
+    display: grid;
+    gap: 1em;
+}
+
+.houses-heading {
+    padding: 1em 0;
+}
+
+.house-card {
+    border: 1px solid black;
+    width: 100%;
+}
+
+.house-card-main-img {
+    width: 100%;
+}
+
+.house-card-text {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 1em 1em 0 1em;
+}
+
+.house-card-title {
+    grid-column: 1 / 4;
+}
+
+.house-card-description {
+    grid-column: 1 / 4;
+}
+
+.house-card-price {
+    grid-column: 1 / 4;
+    color: green;
+    font-weight: bold;
+}
+
+.specs {
+    grid-column: 1 /4;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.house-card-button {
+    text-align: center;
+    width: 100%;
+    background-color: orange;
+    padding: .5em 0;
+    grid-column: 1 / 4;
+    margin: 1em;
+    justify-self: center;
+}
+
+.house-card-button:hover {
+    box-shadow: 5px 5px 10px grey;
+}
+
+.house-card-button:hover a {
+    color: black;
+}
+
+.house-card-spec {
+    display: flex;
+    gap: .5em;
+    align-items: center;
+}
+
