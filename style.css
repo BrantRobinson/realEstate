@@ -1,15 +1,15 @@
 :root {
     --fc-header: white;
+    --fc-links: white;
 }
+
 * {
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
 }
 
 body {
-    font-family: sans-serif;
+    font-family: Arial;
 }
 
 header {
@@ -23,7 +23,8 @@ header {
 }
 
 a {
-    color: white;
+    text-decoration: none;
+    color: var(--fc-links);
 }
 
 .container {
