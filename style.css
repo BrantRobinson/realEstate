@@ -1,0 +1,49 @@
+:root {
+    --fc-header: white;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+header {
+    background-image: url(./img/header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    color: var(--fc-header);
+    text-align: center;
+    padding: 1em 0;
+}
+
+a {
+    color: white;
+}
+
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.top-header {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 0 2em;
+}
+
+.about-us {
+    display: grid;
+    gap: 2em;
+}
