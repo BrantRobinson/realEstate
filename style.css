@@ -26,11 +26,12 @@ body {
 
 header {
     background-image: url(./img/header.jpg);
-    background-size: cover;
-    height: 250px;
+    background-size: auto;
+    background-position: center -200px;
+    height: 350px;
     color: var(--fc-header);
     text-align: center;
-    padding: 1em 0;
+    padding: 2em 0;
 }
 
 a {
@@ -48,15 +49,42 @@ hr {
 }
 
 .top-header {
-    display: flex;
-    flex-direction: column;
-    gap: .5em;
+    height: 100%;
+    display: grid;
+}
+
+.taglines {
+    align-self: flex-end;
+}
+
+.taglines p {
+    text-align: start;
+    font-weight: 700;
+    font-size: 1.5em;
 }
 
 .main-nav {
+    margin-top: 1em;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     gap: 0 1.4em;
+    align-items: flex-start;
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.logo {
+    margin-right: auto;
+    font-size: 2rem;
+}
+
+.main-nav-logo1 {
+    font-weight: 200;
+}
+
+.main-nav-logo2 {
+    font-weight: 700;
+    margin-left: -10px;
 }
 
 /* About section */
@@ -229,7 +257,7 @@ hr {
 footer {
     background-image: url(./img/encuentra.jpg);
     background-size: cover;
-    height: 250px;
+    height: 270px;
     display: grid;
     align-items: center;
 }
