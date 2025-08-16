@@ -268,6 +268,16 @@ hr {
     margin: 1em 0;
 }
 
+.contact-header {
+    background-image: none;
+    background-color: var(--pri-color);
+    height: 200px;
+}
+
+.contact-header a {
+    color: black;
+}
+
 .tooltip img {
     vertical-align: middle;
 }
