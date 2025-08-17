@@ -57,6 +57,45 @@
                             <textarea name="message" id="contact-msg"></textarea>
                         </div>
                     </fieldset>
+                    <fieldset class="contact-fieldset">
+                        <legend>Product Information</legend>
+                        <div class="form-fields">
+                            <label for="type">Type</label>
+                            <select name="type" id="prduct_type">
+                                <option value="option1">Option 1</option>
+                                <option value="option2">Option 2</option>
+                                <option value="option3">Option 3</option>
+                                <option value="option4">Option 4</option>
+                            </select>
+                            <label for="number">Number:</label>
+                            <input type="number" name="number" id="qty">
+                        </div>
+                    </fieldset>
+                    <fieldset class="contact-fieldset">
+                        <legend>Contact Information</legend>
+                        <div class="contact-info-form-field">
+                            <label>Preferred Contact:</label>
+                            <div class="contact-flex">
+                                <p>Phone</p>
+                                <input type="radio" name="preferred" value="phone">
+                            </div>
+                            <div class="contact-flex">
+                                <p>Email</p>
+                                <input type="radio" name="preferred" value="email">
+                            </div>
+                        </div>
+                        <div class="contact-info-form-field2">
+                            <div>
+                                <label>Date:</label>
+                                <input type="date">
+                            </div>
+                            <div>
+                                <label>Hour:</label>
+                                <input type="time">
+                            </div>
+                        </div>
+                        
+                    </fieldset>
                     <button>Submit</button>
                 </form>
             </div>

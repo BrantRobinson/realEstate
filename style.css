@@ -485,6 +485,36 @@ button:hover {
     align-items: center;
 }
 
+.contact-info-form-field {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    align-items: center;
+    margin: .5em 0;
+    padding: .5em;
+}
+
+.contact-info-form-field2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    align-items: center;
+    margin: .5em 0;
+    padding: .5em;
+}
+
+.contact-info-form-field label {
+    margin-right: 2em;
+}
+
+.contact-info-form-field2 label {
+    margin-right: 1em;
+}
+
+.contact-flex {
+    display: flex;
+}
+
 .form-fields input {
     height: 2em;
 }
@@ -536,7 +566,7 @@ footer {
     background-image: none;
     background-color: rgb(225, 225, 225);
     border-top: 1px solid grey;
-    height: 150px;
+    max-height: 150px;
 }
 
 .contact-footer-content {
