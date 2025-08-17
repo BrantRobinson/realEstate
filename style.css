@@ -14,6 +14,8 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    /* temp line below for overflow debugging */
+    /* outline: 1px solid red;  */
 }
 
 html {
@@ -87,7 +89,7 @@ button:hover {
 .taglines p {
     text-align: start;
     font-weight: 700;
-    font-size: 1.5em;
+    font-size: 1.5rem;
 }
 
 .tagline-about {
@@ -95,6 +97,7 @@ button:hover {
     align-self: flex-start;
     width: 60%;
     justify-self: center;
+    padding: .3em 0;
 }
 
 .tagline-about h1 {
@@ -135,7 +138,7 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: 
-        'pic   name'
+        'name   pic'
         'stats  hist'
         'stats  hist'
         'bio    bio '
@@ -235,10 +238,6 @@ button:hover {
     /* border: 1px solid black; */
     
 }
-
-/* .about-us-item h3 {
-    margin-right: auto;
-} */
 
 .about-heading {
     grid-area: top;
@@ -343,7 +342,7 @@ button:hover {
 }
 
 .house-card-description {
-    font-size: small;
+    font-size: .9rem;
 }
 
 .house-card-price {
@@ -502,7 +501,7 @@ button:hover {
 footer {
     background-image: url(./img/encuentra.jpg);
     background-size: cover;
-    height: 270px;
+    /* height: 270px; */
     display: grid;
     align-items: center;
     margin-top: auto;
@@ -556,6 +555,162 @@ footer {
     font-size: 1.5em;
     text-decoration: none;
 }
+
+/* Blog Section */
+
+
+.blog-page-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2em;
+}
+
+.blog-container {
+    margin: 1em 0;
+    display: grid;
+    gap: 1em;
+}
+
+.blog-item {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1em;
+    padding: 1em;
+    /* border: 1px solid black; */
+    /* align-items: center; */
+    box-shadow: 3px 3px 5px grey;
+}
+
+.blog-item img {
+    border-radius: 50%;
+    max-height: 120px;
+    max-width: 100%;
+    aspect-ratio: 1 /1;
+}
+
+.blog-date-and-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: .5em 0;
+}
+
+.blog-date img {
+    height: 1em;
+}
+
+.blog-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.blog-tags-tag {
+    background-color: rgb(221, 221, 221);
+    font-size: .7rem;
+    padding: .3em 1em;
+    border-radius: 10px;
+}
+
+.blog-item-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.blog-item-text a {
+    color: var(--pri-color);
+    border: none;
+}
+
+.blog-date {
+    display: flex;
+    padding: 0 1em;
+}
+
+.sidebar {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    width: 100%;
+}
+
+.sidebar h3 {
+    color: grey;
+    font-style: italic;
+}
+
+.category-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(212, 212, 212);
+    padding: .5em 0;
+}
+
+.category-item a {
+    color: black;
+}
+
+.category-item a:hover {
+    color: grey;
+}
+
+.category-item p {
+    color: grey;
+    font-size: .9rem;
+}
+.popular-articles {
+    display: grid;
+}
+
+.popular-articles-list {
+    display: grid;
+    gap: 1em;
+    width: 100%;
+}
+
+.popular-article-item {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.popular-article-item img {
+    max-width: 125px;
+    align-self: start;
+}
+
+.popular-article-text {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1em;
+}
+
+.popular-article-text a {
+    color: var(--pri-color);
+    border: none;
+    margin-left: auto;
+}
+
+.popular-article-text a:hover {
+    color: grey;
+}
+
+.popular-article-text h2 {
+    font-size: 1rem;
+}
+
+.article-card-heading {
+    grid-column: 1 /3;
+    margin-bottom: 1em;
+}
+
+.article-card-img img {
+    max-width: 100%;
+}
+
+
+/* Media Queries */
 
 @media (min-width: 1000px) {
     .about-us {
@@ -630,4 +785,11 @@ footer {
         'rev1   rev1   rev2   rev2  rev2  ';
     gap: 1em;
     padding: 2em 0;
+    }
+
+    .blog-page-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2em;
+    }
 }
