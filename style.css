@@ -130,6 +130,12 @@ button:hover {
 
 /* About section */
 
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
 .about-body {
     background-color: rgb(226, 226, 226);
 }
@@ -139,8 +145,8 @@ button:hover {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: 
         'name   pic'
-        'stats  hist'
-        'stats  hist'
+        'stats  stats'
+        'hist  hist'
         'bio    bio '
         'quot   quot'
         'rev1   rev1'
@@ -156,13 +162,14 @@ button:hover {
 
 .about-pic {
     grid-area: pic;
-
+    overflow: hidden;
 }
 
 .about-pic img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 .about-name {
@@ -210,6 +217,20 @@ button:hover {
     background-color: rgb(218, 225, 255);
 }
 
+.about-quote p {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.review-image img {
+    max-height: 150px;
+}
+
+.about-review1, .about-review2 {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
 .about-review1 {
     grid-area: rev1;
     background-color: antiquewhite;
@@ -783,7 +804,7 @@ footer {
         'quot   quot   quot'
         'rev1   rev1   rev1'
         'rev2   rev2   rev2' ; 
-    grid-template-rows: repeat(4, 1fr);
+    /* grid-template-rows: repeat(4, 1fr); */
     gap: 1em;
     padding: 2em 0;
 }
