@@ -138,6 +138,7 @@ button:hover {
 
 .about-body {
     background-color: rgb(226, 226, 226);
+    background-image: radial-gradient(circle, rgb(230, 230, 230), rgb(80, 80, 80));
 }
 
 .about-us-page {
@@ -162,14 +163,13 @@ button:hover {
 
 .about-pic {
     grid-area: pic;
-    overflow: hidden;
 }
 
 .about-pic img {
     width: 100%;
-    height: 100%;
+    height: 250px;
     object-fit: cover;
-    display: block;
+    /* display: block; */
 }
 
 .about-name {
@@ -194,9 +194,10 @@ button:hover {
     grid-area: stats;
     background-color: rgb(226, 247, 226);
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: space-around;
     text-align: center;
+    gap: 1em;
 }
 
 .stat h4{
@@ -775,6 +776,10 @@ footer {
         grid-template-areas: 
         'top . .'
         'one two three';
+    }
+
+    .about-stats {
+        flex-direction: column;
     }
 
     .houses {
