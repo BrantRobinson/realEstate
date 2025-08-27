@@ -66,6 +66,10 @@ button:hover {
     border-color: black;
 }
 
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
 .container {
     max-width: 80%;
     margin: 0 auto;
@@ -258,7 +262,6 @@ button:hover {
     gap: 1em;
     justify-items: center;
     /* border: 1px solid black; */
-    
 }
 
 .about-heading {
@@ -654,7 +657,9 @@ footer {
 }
 
 .blog-date img {
-    height: 1em;
+    vertical-align:text-bottom;
+    height: 1.3em;
+    margin-right: .3em;
 }
 
 .blog-tags {
@@ -684,6 +689,7 @@ footer {
 .blog-date {
     display: flex;
     padding: 0 1em;
+    align-items: center;
 }
 
 .sidebar {
@@ -855,3 +861,4 @@ footer {
     gap: 2em;
     }
 }
+
